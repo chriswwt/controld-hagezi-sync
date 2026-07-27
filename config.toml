@@ -48,4 +48,4 @@ names = ["VPN-Replacement Profile"]
 # =============================================================================
 
 [profile_folders]
-"VPN-Replacement Profile" = ["Badware Hoster", "Amazon Tracker", "Microsoft Tracker", "Tiktok Tracker - aggressive", "Referral", "Spam IDNs", "Known Issues allow", "No Safesearch Support"]
+"VPN-Replacement Profile" = ["Badware Hoster", "Amazon Tracker", "Microsoft Tracker", "Tiktok Tracker - aggressive", "Referral", "Spam IDNs", "Known Issues allow"]
