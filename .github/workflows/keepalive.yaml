@@ -1,0 +1,23 @@
+name: Keepalive
+
+on:
+  schedule:
+    - cron: '0 0 1 * *' # Runs on the 1st of every month at midnight
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to allow the bot to commit to the repo
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Dummy Commit to Keep Repository Active
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          date > keepalive.txt
+          git add keepalive.txt
+          git commit -m "chore: automated keepalive [skip ci]" || exit 0
+          git push
